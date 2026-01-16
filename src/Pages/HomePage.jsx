@@ -11,7 +11,6 @@ import Footer from "../Components/Footer";
 const HomePage = () => {
   return (
     <div>
-      <Navbar />
       <HeroSection />
       <HowItsWork />
       <PostYourFirstTask />
