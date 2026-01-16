@@ -7,7 +7,6 @@ import InProgressJobs from '../Components/DashboardComponents/InProgressJobs'
 const Dashboard = () => {
   return (
     <div>
-        <DashboardNavbar/>
         <WelcomeSection/>
         <TotalJobs/>
         <InProgressJobs/>

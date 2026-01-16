@@ -1,16 +1,19 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { useLocation } from 'react-router-dom';
 import { MessageCircle, Bell } from 'lucide-react';
 import Logo from '../../assets/Images/Logo.png';
 import Image20 from '../../assets/Images/image20.jpg';
 
 const DashboardNavbar = () => {
-  // State to track the active link
-  const [activeLink, setActiveLink] = useState('Dashboard');
+  const location = useLocation();
 
-  // Handler for clicking a link
-  const handleLinkClick = (link) => {
-    setActiveLink(link);
-  };
+  const links = [
+    { path: '/dashboard', label: 'Dashboard' },
+    { path: '/services', label: 'Services' },
+    { path: '/my-jobs', label: 'My Jobs' },
+    { path: '/messages', label: 'Messages' },
+    { path: '/payments', label: 'Payments' },
+  ];
 
   return (
     <nav className="w-full h-20 bg-white backdrop-blur-3xl border-b border-gray-200">
@@ -22,33 +25,33 @@ const DashboardNavbar = () => {
 
         {/* Center - Navigation Links */}
         <div className="flex space-x-10">
-          {['Dashboard', 'Servics', 'My jobs', 'Messages', 'Payments'].map((link) => (
-            <div key={link} className="relative">
+          {links.map(({ path, label }) => (
+            <div key={path} className="relative h-full flex items-center">
               <a
-                href="#"
-                onClick={() => handleLinkClick(link)}
-                className={`text-black font-medium text-base uppercase tracking-wide
-                  hover:text-gray-600 transition-colors duration-300
-                  ${activeLink === link ? "text-blue-500" : ""}`} // Active link color
+                href={path}
+                className={`text-black font-medium text-base uppercase tracking-wide hover:text-gray-600 transition-colors duration-300 ${
+                  location.pathname === path ? 'text-blue-500' : ''
+                }`}
               >
-                {link}
+                {label}
               </a>
-              {/* Bottom border for active link */}
-              {activeLink === link && (
-                <div className="absolute bottom-[-5px] left-0 right-0 h-0.5 bg-blue-500" />
+              {/* Bottom Border for Active Link */}
+              {location.pathname === path && (
+                <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-blue-500"></div>
               )}
             </div>
           ))}
         </div>
 
-        {/* Right - Sign In */}
+        {/* Right - Profile and Notifications */}
         <div className="flex items-center space-x-4">
           <img src={Image20} alt="Profile" className="w-8 h-8 rounded-full" />
-          <button className="relative">
-            <MessageCircle size={24} className="text-gray-700 hover:text-blue-500" />
+          <button className="relative p-2 hover:bg-gray-100 rounded-full transition-colors">
+            <MessageCircle size={20} className="text-gray-700 hover:text-blue-500" />
           </button>
-          <button className="relative">
-            <Bell size={24} className="text-gray-700 hover:text-blue-500" />
+          <button className="relative p-2 hover:bg-gray-100 rounded-full transition-colors">
+            <Bell size={20} className="text-gray-700 hover:text-blue-500" />
+            <span className="absolute top-1 right-1 w-2 h-2 bg-red-500 rounded-full"></span>
           </button>
         </div>
       </div>
