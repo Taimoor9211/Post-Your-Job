@@ -18,7 +18,6 @@ const HomePage = () => {
       <FrequentlyAskQuestions />
       <Trustandsafety />
       <ReadytoSimplifyYourLife />
-      <Footer />
     </div>
   );
 };

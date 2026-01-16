@@ -19,6 +19,12 @@ const Navbar = () => {
             Home
           </a>
           <a 
+            href="/dashboard" 
+            className="text-black font-medium text-base uppercase tracking-wide hover:text-gray-600 transition-colors duration-300"
+          >
+            Dashboard
+          </a>
+          <a 
             href="#" 
             className="text-black font-medium text-base uppercase tracking-wide hover:text-gray-600 transition-colors duration-300"
           >
