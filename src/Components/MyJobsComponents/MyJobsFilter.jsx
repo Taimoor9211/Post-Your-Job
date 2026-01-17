@@ -1,0 +1,356 @@
+import React, { useState } from 'react';
+import Image21 from '../../assets/Images/image21.jpg';
+import Image22 from '../../assets/Images/image22.jpg';
+import Image23 from '../../assets/Images/image23.jpg';
+import Image24 from '../../assets/Images/image24.jpg';
+import { Languages, MapPin } from 'lucide-react';
+
+const MyJobsFilter = () => {
+  // State for filter
+  const [filter, setFilter] = useState('all');
+
+  // All Jobs Data
+  const allJobs = [
+    {
+      id: 1,
+      title: "Plumber",
+      jobId: "#JCD001",
+      status: "In progress",
+      client: "Michael John",
+      languages: "English, Hindi",
+      location: "San Francisco",
+      date: "Wednesday - April 23, 2025",
+      time: "11:30 AM",
+      jobType: "Plumber",
+      image: Image21,
+      statusColor: "bg-blue-500",
+      statusBg: "bg-blue-50",
+      statusText: "text-blue-700"
+    },
+    {
+      id: 2,
+      title: "Electrician",
+      jobId: "#JCD002",
+      status: "Scheduled",
+      client: "Sarah Johnson",
+      languages: "English, Spanish",
+      location: "New York City",
+      date: "Thursday - April 24, 2025",
+      time: "02:45 PM",
+      jobType: "Electrician",
+      image: Image23,
+      statusColor: "bg-[#FBBB00]",
+      statusBg: "bg-[#FBBB0026]",
+      statusText: "text-[#FBBB00]"
+    },
+    {
+      id: 3,
+      title: "Carpenter",
+      jobId: "#JCD003",
+      status: "Completed",
+      client: "Robert Wilson",
+      languages: "English, French",
+      location: "Chicago",
+      date: "Friday - April 25, 2025",
+      time: "10:00 AM",
+      jobType: "Carpenter",
+      image: Image24,
+      statusColor: "bg-green-500",
+      statusBg: "bg-green-50",
+      statusText: "text-green-700"
+    },
+    {
+      id: 4,
+      title: "Painter",
+      jobId: "#JCD004",
+      status: "Cancelled",
+      client: "Emma Thompson",
+      languages: "English, German",
+      location: "Los Angeles",
+      date: "Monday - April 28, 2025",
+      time: "09:15 AM",
+      jobType: "Painter",
+      image: Image22,
+      statusColor: "bg-red-500",
+      statusBg: "bg-red-50",
+      statusText: "text-red-700"
+    },
+    {
+      id: 5,
+      title: "Cleaner",
+      jobId: "#JCD005",
+      status: "In progress",
+      client: "David Brown",
+      languages: "English, Chinese",
+      location: "Boston",
+      date: "Tuesday - April 29, 2025",
+      time: "01:00 PM",
+      jobType: "Cleaner",
+      image: Image22,
+      statusColor: "bg-blue-500",
+      statusBg: "bg-blue-50",
+      statusText: "text-blue-700"
+    },
+    {
+      id: 6,
+      title: "Gardener",
+      jobId: "#JCD006",
+      status: "Scheduled",
+      client: "Lisa Anderson",
+      languages: "English, Italian",
+      location: "Seattle",
+      date: "Wednesday - April 30, 2025",
+      time: "03:30 PM",
+      jobType: "Gardener",
+      image: Image21,
+      statusColor: "bg-[#FBBB00]",
+      statusBg: "bg-[#FBBB0026]",
+      statusText: "text-[#FBBB00]"
+    },
+    {
+      id: 7,
+      title: "Electrician",
+      jobId: "#JCD007",
+      status: "Completed",
+      client: "James Miller",
+      languages: "English, Spanish",
+      location: "Austin",
+      date: "Thursday - May 1, 2025",
+      time: "11:00 AM",
+      jobType: "Electrician",
+      image: Image24,
+      statusColor: "bg-green-500",
+      statusBg: "bg-green-50",
+      statusText: "text-green-700"
+    },
+    {
+      id: 8,
+      title: "Plumber",
+      jobId: "#JCD008",
+      status: "Scheduled",
+      client: "Maria Garcia",
+      languages: "English, Spanish",
+      location: "Miami",
+      date: "Friday - May 2, 2025",
+      time: "04:15 PM",
+      jobType: "Plumber",
+      image: Image23,
+      statusColor: "bg-[#FBBB00]",
+      statusBg: "bg-[#FBBB0026]",
+      statusText: "text-[#FBBB00]"
+    },
+    {
+      id: 9,
+      title: "Cleaner",
+      jobId: "#JCD005",
+      status: "In progress",
+      client: "David Brown",
+      languages: "English, Chinese",
+      location: "Boston",
+      date: "Tuesday - April 29, 2025",
+      time: "01:00 PM",
+      jobType: "Cleaner",
+      image: Image21,
+      statusColor: "bg-blue-500",
+      statusBg: "bg-blue-50",
+      statusText: "text-blue-700"
+    },
+    {
+      id: 10,
+      title: "Gardener",
+      jobId: "#JCD006",
+      status: "Scheduled",
+      client: "Lisa Anderson",
+      languages: "English, Italian",
+      location: "Seattle",
+      date: "Wednesday - April 30, 2025",
+      time: "03:30 PM",
+      jobType: "Gardener",
+      image: Image23,
+      statusColor: "bg-[#FBBB00]",
+      statusBg: "bg-[#FBBB0026]",
+      statusText: "text-[#FBBB00]"
+    },
+    {
+      id: 11,
+      title: "Electrician",
+      jobId: "#JCD007",
+      status: "Completed",
+      client: "James Miller",
+      languages: "English, Spanish",
+      location: "Austin",
+      date: "Thursday - May 1, 2025",
+      time: "11:00 AM",
+      jobType: "Electrician",
+      image: Image22,
+      statusColor: "bg-green-500",
+      statusBg: "bg-green-50",
+      statusText: "text-green-700"
+    },
+    {
+      id: 12,
+      title: "Plumber",
+      jobId: "#JCD008",
+      status: "Scheduled",
+      client: "Maria Garcia",
+      languages: "English, Spanish",
+      location: "Miami",
+      date: "Friday - May 2, 2025",
+      time: "04:15 PM",
+      jobType: "Plumber",
+      image: Image24,
+      statusColor: "bg-[#FBBB00]",
+      statusBg: "bg-[#FBBB0026]",
+      statusText: "text-[#FBBB00]"
+    },
+  ];
+
+  // Filter jobs based on selected status
+  const filteredJobs = allJobs.filter(job => {
+    if (filter === 'all') return true;
+    if (filter === 'in-progress') return job.status === "In progress";
+    if (filter === 'scheduled') return job.status === "Scheduled";
+    if (filter === 'completed') return job.status === "Completed";
+    if (filter === 'cancelled') return job.status === "Cancelled";
+    return true;
+  });
+
+  // Handle filter change
+  const handleFilterChange = (e) => {
+    const value = e.target.value;
+    setFilter(value);
+  };
+
+  const JobCard = ({ job }) => (
+    <div className='bg-white rounded-xl shadow-lg border border-gray-100 overflow-hidden hover:shadow-xl transition-all duration-300 h-full flex flex-col'>
+      {/* Card Header */}
+      <div className='p-4 sm:p-5 lg:p-6 flex-grow'>
+        <div className='flex justify-between items-start mb-3 sm:mb-4'>
+          <div className='flex-1'>
+            <h3 className='text-base sm:text-lg font-bold text-gray-900 line-clamp-1'>{job.title}</h3>
+            <span className={`px-2 sm:px-3 py-1 ${job.statusBg} ${job.statusText} text-xs font-semibold rounded-full flex items-center w-fit mt-1`}>
+              <span className={`w-1.5 h-1.5 sm:w-2 sm:h-2 ${job.statusColor} rounded-full mr-1.5 sm:mr-2`}></span>
+              {job.status}
+            </span>
+          </div>
+          <p className='text-xs sm:text-sm text-gray-500 ml-2 whitespace-nowrap'>{job.jobId}</p>
+        </div>
+
+        {/* Client Info */}
+        <div className='flex items-start space-x-3 sm:space-x-4 mt-4'>
+          <img 
+            src={job.image} 
+            alt={job.client}
+            className='w-10 h-10 sm:w-12 sm:h-12 lg:w-14 lg:h-14 rounded-full object-cover border-2 border-gray-100 flex-shrink-0'
+          />
+          <div className='flex-1 min-w-0'>
+            <h4 className='font-bold text-gray-900 text-sm sm:text-base truncate'>{job.client}</h4>
+            <div className='flex flex-col sm:flex-row sm:justify-between gap-2 mt-2'>
+              <div className='flex items-center space-x-1.5 sm:space-x-2'>
+                <Languages className='h-2 w-2 sm:h-3 sm:w-3 text-gray-400 flex-shrink-0' />
+                <span className='text-xs sm:text-[8px] text-gray-600 truncate'>{job.languages}</span>
+              </div>
+              <div className='flex items-center space-x-1.5 sm:space-x-2'>
+                <MapPin className='h-2 w-2 sm:h-3 sm:w-3 text-gray-400 flex-shrink-0' />
+                <span className='text-xs sm:text-[8px] text-gray-600 truncate'>{job.location}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Divider */}
+      <div className='px-4 sm:px-5 lg:px-6'>
+        <hr className='border-gray-200' />
+      </div>
+
+      {/* Job Details */}
+      <div className='p-4 sm:p-5 lg:p-6 space-y-2.5 sm:space-y-3'>
+        <div className='flex justify-between items-center'>
+          <p className='text-xs text-gray-500'>Date</p>
+          <p className='font-medium text-gray-900 text-xs sm:text-sm text-right'>{job.date}</p>
+        </div>
+        <div className='flex justify-between items-center'>
+          <p className='text-xs text-gray-500'>Time</p>
+          <p className='font-medium text-gray-900 text-xs sm:text-sm'>{job.time}</p>
+        </div>
+        <div className='flex justify-between items-center'>
+          <p className='text-xs text-gray-500'>Job Type</p>
+          <p className='font-medium text-gray-900 text-xs sm:text-sm'>{job.jobType}</p>
+        </div>
+      </div>
+
+      {/* Button */}
+      <div className='px-4 sm:px-5 lg:px-6 pb-4 sm:pb-5 lg:pb-6 mt-auto'>
+        <button className='w-full bg-[#515DEF] text-white font-medium py-2.5 sm:py-3 px-4 rounded-full hover:bg-[#3F4BDA] transition-colors duration-200 flex items-center justify-center text-sm sm:text-base'>
+          View Job Details
+        </button>
+      </div>
+    </div>
+  );
+
+  return (
+    <div className='w-full max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 py-6 sm:py-8'>
+      {/* All Jobs Section */}
+      <div>
+        <div className='flex justify-between items-center mb-6 px-4'>
+          <h2 className='text-xl sm:text-2xl font-bold text-gray-900'>
+            My Jobs {filter !== 'all' && `(${filteredJobs.length})`}
+          </h2>
+          <div className='flex items-center space-x-3'>
+            <select 
+              value={filter}
+              onChange={handleFilterChange}
+              className='bg-white border border-gray-300 rounded-lg px-3 sm:px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#515DEF]'
+            >
+              <option value="all">All Jobs ({allJobs.length})</option>
+              <option value="in-progress">In Progress ({allJobs.filter(job => job.status === "In progress").length})</option>
+              <option value="scheduled">Scheduled ({allJobs.filter(job => job.status === "Scheduled").length})</option>
+              <option value="completed">Completed ({allJobs.filter(job => job.status === "Completed").length})</option>
+              <option value="cancelled">Cancelled ({allJobs.filter(job => job.status === "Cancelled").length})</option>
+            </select>
+          </div>
+        </div>
+
+        {/* Show filtered results count */}
+        {filter !== 'all' && (
+          <div className='mb-6 px-4'>
+            <p className='text-gray-600 text-sm'>
+              Showing {filteredJobs.length} {filteredJobs.length === 1 ? 'job' : 'jobs'} with status: 
+              <span className='font-medium ml-1 capitalize'>{filter.replace('-', ' ')}</span>
+            </p>
+          </div>
+        )}
+
+        {/* Job Cards Grid - Filtered Jobs */}
+        <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-5 lg:gap-6'>
+          {filteredJobs.length > 0 ? (
+            filteredJobs.map((job) => (
+              <JobCard key={job.id} job={job} />
+            ))
+          ) : (
+            <div className='col-span-full flex flex-col items-center justify-center py-12'>
+              <div className='text-center'>
+                <div className='text-gray-400 mb-4'>
+                  <svg className='w-16 h-16 mx-auto' fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+                <h3 className='text-lg font-medium text-gray-900 mb-2'>No jobs found</h3>
+                <p className='text-gray-600 text-sm'>No jobs match the selected filter. Try selecting a different status.</p>
+                <button 
+                  onClick={() => setFilter('all')}
+                  className='mt-4 bg-[#515DEF] text-white font-medium py-2 px-6 rounded-full hover:bg-[#3F4BDA] transition-colors duration-200 text-sm'
+                >
+                  Show All Jobs
+                </button>
+              </div>
+            </div>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default MyJobsFilter;

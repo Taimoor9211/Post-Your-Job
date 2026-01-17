@@ -1,8 +1,11 @@
 import React from 'react'
+import MyJobsFilter from '../Components/MyJobsComponents/MyJobsFilter'
 
 const MyJobs = () => {
   return (
-    <div>MyJobs</div>
+    <div>
+      <MyJobsFilter/>
+    </div>
   )
 }
 
