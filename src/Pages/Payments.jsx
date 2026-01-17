@@ -1,8 +1,11 @@
 import React from 'react'
+import PaymentsHeroSection from '../Components/PaymentsComponents/PaymentsHeroSection'
 
 const Payments = () => {
   return (
-    <div>Payments</div>
+    <div>
+      <PaymentsHeroSection/>
+    </div>
   )
 }
 
