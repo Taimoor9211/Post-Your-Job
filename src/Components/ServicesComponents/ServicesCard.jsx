@@ -17,9 +17,9 @@ import Image16 from "../../assets/Images/image16.jpg"
 
 const ServicesCard = () => {
   return (
-    <div className="w-full pb-10">
+    <div className="w-full max-w-[1100px] mx-auto pb-10 px-8">
       {/* Home Improvements Section */}
-      <div className=" max-w-[1100px] mx-auto pb-10 px-8">
+      <div className="  pb-10">
         <div className="flex justify-between items-center px-4 mb-10">
           <h2 className="text-3xl font-bold text-gray-900">
             Home Improvements
@@ -60,7 +60,7 @@ const ServicesCard = () => {
       </div>
 
       {/* Food & Drinks Section */}
-      <div className="w-full max-w-[1100px] mx-auto py-10">
+      <div className="w-full max-w-[1100px] mx-auto py-10 ">
         <div className="flex justify-between items-center px-4 mb-10">
           <h2 className="text-3xl font-bold text-gray-900">Food & Drinks</h2>
           <a href="#" className="text-[#515DEF] font-medium text-lg hover:underline">
