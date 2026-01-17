@@ -10,6 +10,7 @@ import Messages from './Pages/Messages';
 import Payments from './Pages/Payments';
 import DashboardNavbar from './Components/DashboardComponents/DashboardNavbar';
 import Navbar from './Components/Navbar';
+import PayNow from './Components/PaymentsComponents/PayNow';
 
 const App = () => {
   return (
@@ -22,6 +23,7 @@ const App = () => {
         <Route path="/my-jobs" element={<MyJobs />} />
         <Route path="/messages" element={<Messages />} />
         <Route path="/payments" element={<Payments />} />
+        <Route path="paynow" element={<PayNow />} />
       </Routes>
       <Footer />
     </Router>
