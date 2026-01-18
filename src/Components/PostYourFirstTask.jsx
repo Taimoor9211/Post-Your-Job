@@ -1,10 +1,10 @@
 import React from 'react'
-import Plumbing from '../assets/Images/PostYourFirstTask/plumbing.jpg'
-import Vehicle from '../assets/Images/PostYourFirstTask/vehicle-booking.jpg'
-import Food from '../assets/Images/PostYourFirstTask/food-delivery.jpg'
-import Consultation from '../assets/Images/PostYourFirstTask/consultation.jpg'
-import ECommerce from '../assets/Images/PostYourFirstTask/e-commerce.jpg'
-import HomeMaintenance from '../assets/Images/PostYourFirstTask/home-maintenance.jpg'
+import Image26 from '../assets/Images/Image26.jpg'
+import Image27 from '../assets/Images/Image27.jpg'
+import Image28 from '../assets/Images/Image28.jpg'
+import Image29 from '../assets/Images/Image29.jpg'
+import Image30 from '../assets/Images/Image30.jpg'
+import Image31 from '../assets/Images/Image31.jpg'
 
 const PostYourFirstTask = () => {
   return (
@@ -56,7 +56,7 @@ const PostYourFirstTask = () => {
                 <div className="bg-white border border-gray-200 rounded-xl p-2 hover:border-[#515DEF] transition-colors max-w-[80%]">
                   <div className="flex items-start gap-4">
                     <div className="w-10 h-10 rounded-lg overflow-hidden flex-shrink-0">
-                      <img src={Plumbing} alt="Plumbing" className="w-full h-full object-cover" />
+                      <img src={Image26} alt="Plumbing" className="w-full h-full object-cover" />
                     </div>
                     <div>
                       <h3 className="font-semibold text-gray-900">Plumbing</h3>
@@ -71,7 +71,7 @@ const PostYourFirstTask = () => {
                 <div className="bg-white border border-gray-200 rounded-xl p-2 hover:border-[#515DEF] transition-colors max-w-[80%]">
                   <div className="flex items-start gap-4">
                     <div className="w-10 h-10 rounded-lg overflow-hidden flex-shrink-0">
-                      <img src={Vehicle} alt="Vehicle Booking" className="w-full h-full object-cover" />
+                      <img src={Image27} alt="Vehicle Booking" className="w-full h-full object-cover" />
                     </div>
                     <div>
                       <h3 className="font-semibold text-gray-900 ">Vehicle Booking</h3>
@@ -86,7 +86,7 @@ const PostYourFirstTask = () => {
                 <div className="bg-white border border-gray-200 rounded-xl p-2 hover:border-[#515DEF] transition-colors max-w-[80%]">
                   <div className="flex items-start gap-4">
                     <div className="w-10 h-10 rounded-lg overflow-hidden flex-shrink-0">
-                      <img src={Food} alt="Food Delivery" className="w-full h-full object-cover" />
+                      <img src={Image28} alt="Food Delivery" className="w-full h-full object-cover" />
                     </div>
                     <div>
                       <h3 className="font-semibold text-gray-900 ">Food Delivery</h3>
@@ -101,7 +101,7 @@ const PostYourFirstTask = () => {
                 <div className="bg-white border border-gray-200 rounded-xl p-2 hover:border-[#515DEF] transition-colors max-w-[80%]">
                   <div className="flex items-start gap-4">
                     <div className="w-10 h-10 rounded-lg overflow-hidden flex-shrink-0">
-                      <img src={Consultation} alt="Consultation" className="w-full h-full object-cover" />
+                      <img src={Image29} alt="Consultation" className="w-full h-full object-cover" />
                     </div>
                     <div>
                       <h3 className="font-semibold text-gray-900">Consultation</h3>
@@ -116,7 +116,7 @@ const PostYourFirstTask = () => {
                 <div className="bg-white border border-gray-200 rounded-xl p-2 hover:border-[#515DEF] transition-colors max-w-[80%]">
                   <div className="flex items-start gap-4">
                     <div className="w-10 h-10 rounded-lg overflow-hidden flex-shrink-0">
-                      <img src={ECommerce} alt="E-Commerce" className="w-full h-full object-cover" />
+                      <img src={Image30} alt="E-Commerce" className="w-full h-full object-cover" />
                     </div>
                     <div>
                       <h3 className="font-semibold text-gray-900">E-Commerce</h3>
@@ -131,7 +131,7 @@ const PostYourFirstTask = () => {
                 <div className="bg-white border border-gray-200 rounded-xl p-2 hover:border-[#515DEF] transition-colors max-w-[80%]">
                   <div className="flex items-start gap-4">
                     <div className="w-10 h-10 rounded-lg overflow-hidden flex-shrink-0">
-                      <img src={HomeMaintenance} alt="Home Maintenance" className="w-full h-full object-cover" />
+                      <img src={Image30} alt="Home Maintenance" className="w-full h-full object-cover" />
                     </div>
                     <div>
                       <h3 className="font-semibold text-gray-900">Home Maintenance</h3>
