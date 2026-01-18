@@ -1,5 +1,5 @@
 import React from "react";
-import Image18 from "../assets/Images/Image18.png";
+import Image18 from "../assets/Images/image18.png";
 import { FaApple, FaGooglePlay } from "react-icons/fa";
 
 const ReadytoSimplifyYourLife = () => {

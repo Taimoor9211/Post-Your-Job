@@ -1,10 +1,10 @@
 import React from 'react'
-import Image26 from '../assets/Images/Image26.jpg'
-import Image27 from '../assets/Images/Image27.jpg'
-import Image28 from '../assets/Images/Image28.jpg'
-import Image29 from '../assets/Images/Image29.jpg'
-import Image30 from '../assets/Images/Image30.jpg'
-import Image31 from '../assets/Images/Image31.jpg'
+import Image26 from '../assets/Images/image26.jpg'
+import Image27 from '../assets/Images/image27.jpg'
+import Image28 from '../assets/Images/image28.jpg'
+import Image29 from '../assets/Images/image29.jpg'
+import Image30 from '../assets/Images/image30.jpg'
+import Image31 from '../assets/Images/image31.jpg'
 
 const PostYourFirstTask = () => {
   return (
