@@ -6,6 +6,9 @@ import Image24 from '../../assets/Images/image24.jpg';
 import { Languages, MapPin } from 'lucide-react';
 import PayNow from './PayNow';
 import { useNavigate } from 'react-router-dom';
+import { useState } from 'react';
+import ViewDetails from '../PaymentsComponents/ViewDetails.jsx';
+import Modal from '../PaymentsComponents/Modal.jsx';
 
 const PaymentsHeroSection = () => {
   // All Jobs Data
@@ -117,7 +120,7 @@ const PaymentsHeroSection = () => {
       date: "Wednesday - April 23, 2025",
       time: "11:30 AM",
       jobType: "Plumber",
-      image: Image21,
+      image: Image23,
       statusColor: "bg-blue-500",
       statusBg: "bg-blue-50",
       statusText: "text-blue-700"
@@ -133,7 +136,7 @@ const PaymentsHeroSection = () => {
       date: "Wednesday - April 23, 2025",
       time: "11:30 AM",
       jobType: "Plumber",
-      image: Image21,
+      image: Image22,
       statusColor: "bg-blue-500",
       statusBg: "bg-blue-50",
       statusText: "text-blue-700"
@@ -141,7 +144,14 @@ const PaymentsHeroSection = () => {
     
   ];
 
+   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedJob, setSelectedJob] = useState(null);
   const navigate = useNavigate();
+
+   const handleViewDetails = (job) => {
+    setSelectedJob(job);
+    setIsModalOpen(true);
+  };
 
   const JobCard = ({ job }) => (
     <div className='bg-white rounded-xl  shadow-lg border border-gray-100 overflow-hidden hover:shadow-xl transition-all duration-300 h-full flex flex-col'>
@@ -211,7 +221,9 @@ const PaymentsHeroSection = () => {
             Pay Now
           </button>
         ) : (
-          <button className='w-full bg-[#515DEF] text-white font-medium py-2.5 sm:py-3 px-4 rounded-full hover:bg-[#3F4BDA] transition-colors duration-200 flex items-center justify-center text-sm sm:text-base'>
+          <button 
+          onClick={() => handleViewDetails(job)}
+          className='w-full bg-[#515DEF] text-white font-medium py-2.5 sm:py-3 px-4 rounded-full hover:bg-[#3F4BDA] transition-colors duration-200 flex items-center justify-center text-sm sm:text-base'>
             View Details
           </button>
         )}
@@ -236,6 +248,11 @@ const PaymentsHeroSection = () => {
           ))}
         </div>
       </div>
+
+      {/* Modal for Viewing Details */}
+      <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} title="Job Details">
+        {selectedJob && <ViewDetails job={selectedJob} />}
+      </Modal>
     </div>
   );
 }

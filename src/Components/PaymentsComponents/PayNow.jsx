@@ -1,8 +1,11 @@
 import React from "react";
 import Image21 from "../../assets/Images/image21.jpg";
 import { Languages, MapPin, MessageCircle, Apple, CreditCard, Landmark } from "lucide-react";
+import { useNavigate } from "react-router-dom";
+
 
 const PayNow = () => {
+  const navigate = useNavigate();
   return (
     <div className="flex w-full max-w-[1300px] mx-auto gap-8 py-10 px-20">
       {/* Left Side - Checkout Form */}
@@ -85,7 +88,9 @@ const PayNow = () => {
         </div>
 
         <div className="flex justify-end">
-          <button className="w-[170px] bg-blue-600 text-white font-medium py-3 rounded-lg">
+          <button
+          onClick={() => navigate('/review')}
+           className="w-[170px] bg-blue-600 text-white font-medium py-3 rounded-lg">
             Check Out
           </button>
         </div>
