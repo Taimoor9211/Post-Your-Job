@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useLocation, Link } from 'react-router-dom';
 import { MessageCircle, Bell } from 'lucide-react';
-import Logo from '../../assets/Images/Logo.png';
+import Logo from '../../assets/Images/logo.png';
 import Image20 from '../../assets/Images/image20.jpg';
 
 const DashboardNavbar = () => {

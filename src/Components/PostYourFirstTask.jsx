@@ -131,7 +131,7 @@ const PostYourFirstTask = () => {
                 <div className="bg-white border border-gray-200 rounded-xl p-2 hover:border-[#515DEF] transition-colors max-w-[80%]">
                   <div className="flex items-start gap-4">
                     <div className="w-10 h-10 rounded-lg overflow-hidden flex-shrink-0">
-                      <img src={Image30} alt="Home Maintenance" className="w-full h-full object-cover" />
+                      <img src={Image31} alt="Home Maintenance" className="w-full h-full object-cover" />
                     </div>
                     <div>
                       <h3 className="font-semibold text-gray-900">Home Maintenance</h3>

@@ -1,6 +1,6 @@
 import React from "react";
-import Image17 from "../assets/Images/Image17.png";
-import Image19 from "../assets/Images/Image19.jpg";
+import Image17 from "../assets/Images/image17.png";
+import Image19 from "../assets/Images/image19.jpg";
 
 const Trustandsafety = () => {
   return (

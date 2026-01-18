@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Image25 from "../../assets/Images/Image25.jpg";
+import Image25 from "../../assets/Images/image25.jpg";
 import {
   Clock,
   Mail,
