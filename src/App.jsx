@@ -13,6 +13,7 @@ import Navbar from './Components/Navbar';
 import PayNow from './Components/PaymentsComponents/PayNow';
 import Review from './Components/PaymentsComponents/Review';
 import ProfileSettings from './Components/DashboardComponents/ProfileSettings';
+import ImageDetailPage from './Components/DashboardComponents/ImageDetailPage';
 
 const App = () => {
   return (
@@ -28,6 +29,7 @@ const App = () => {
         <Route path="/paynow" element={<PayNow />} />
         <Route path="/review" element={<Review />} />
         <Route path='/profile-settings' element={<ProfileSettings />} />
+        <Route path='/service-details'  element={<ImageDetailPage/>} />
       </Routes>
       <Footer />
     </Router>

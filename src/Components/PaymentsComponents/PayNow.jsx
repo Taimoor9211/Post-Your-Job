@@ -1,8 +1,14 @@
 import React from "react";
 import Image21 from "../../assets/Images/image21.jpg";
-import { Languages, MapPin, MessageCircle, Apple, CreditCard, Landmark } from "lucide-react";
+import {
+  Languages,
+  MapPin,
+  MessageCircle,
+  CreditCard,
+  Landmark,
+} from "lucide-react";
+import { FaApple, FaGoogle, FaGooglePay } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
-
 
 const PayNow = () => {
   const navigate = useNavigate();
@@ -11,20 +17,20 @@ const PayNow = () => {
       {/* Left Side - Checkout Form */}
       <div className="w-[696px] bg-white p-6">
         <h2 className="text-2xl font-bold mb-2">Checkout</h2>
-        <p className="text-gray-600 mb-6">Review your details and complete your Payment.</p>
+        <p className="text-gray-600 mb-6">
+          Review your details and complete your Payment.
+        </p>
 
         {/* Payment Method */}
         <div className="w-full mb-8">
           <h2 className="text-lg font-bold mb-4">Payment Method</h2>
           <div className="space-y-2">
             <div className="flex items-center p-3 bg-[#C5C5C526] rounded-lg">
-              <Apple className="w-6 h-6 text-black mr-3" />
+              <FaApple className="w-6 h-6 text-black mr-3" />
               <span className="font-medium">Apple Pay</span>
             </div>
             <div className="flex items-center p-3 bg-[#C5C5C526] rounded-lg">
-              <div className="w-6 h-6 border border-gray-400 rounded-full flex items-center justify-center mr-3">
-                <span className="font-bold text-gray-700">G</span>
-              </div>
+              <FaGoogle className="w-6 h-6 text-black mr-3" />
               <span className="font-medium">Google Pay</span>
             </div>
             <div className="flex items-center p-3 bg-[#C5C5C526] rounded-lg">
@@ -37,14 +43,14 @@ const PayNow = () => {
         {/* Card Payment */}
         <div className="mb-6">
           <div className="flex items-center gap-2 mb-4">
-            <img 
-              src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Visa_Inc._logo.svg" 
-              alt="Visa" 
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Visa_Inc._logo.svg"
+              alt="Visa"
               className="h-6"
             />
-            <img 
-              src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg" 
-              alt="Mastercard" 
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg"
+              alt="Mastercard"
               className="h-6"
             />
           </div>
@@ -59,7 +65,9 @@ const PayNow = () => {
           </div>
 
           <div className="mb-4">
-            <label className="block font-medium text-gray-900 mb-2">Account Holder Name</label>
+            <label className="block font-medium text-gray-900 mb-2">
+              Account Holder Name
+            </label>
             <input
               type="text"
               placeholder="Full Name"
@@ -69,7 +77,9 @@ const PayNow = () => {
 
           <div className="flex justify-between gap-4 mb-8">
             <div className="flex-1">
-              <label className="block font-medium text-gray-900 mb-2">Expiration Date</label>
+              <label className="block font-medium text-gray-900 mb-2">
+                Expiration Date
+              </label>
               <input
                 type="text"
                 placeholder="MM / DD / YY"
@@ -77,7 +87,9 @@ const PayNow = () => {
               />
             </div>
             <div className="flex-1">
-              <label className="block font-medium text-gray-900 mb-2">CVV</label>
+              <label className="block font-medium text-gray-900 mb-2">
+                CVV
+              </label>
               <input
                 type="text"
                 placeholder="000"
@@ -89,8 +101,9 @@ const PayNow = () => {
 
         <div className="flex justify-end">
           <button
-          onClick={() => navigate('/review')}
-           className="w-[170px] bg-blue-600 text-white font-medium py-3 rounded-lg">
+            onClick={() => navigate("/review")}
+            className="w-[170px] bg-blue-600 text-white font-medium py-3 rounded-lg"
+          >
             Check Out
           </button>
         </div>
@@ -114,10 +127,16 @@ const PayNow = () => {
 
           {/* Client Info */}
           <div className="flex items-start space-x-3 mt-6 mb-6">
-            <img src={Image21} alt="Michael John" className="w-12 h-12 rounded-full object-cover border-2 border-gray-100" />
+            <img
+              src={Image21}
+              alt="Michael John"
+              className="w-12 h-12 rounded-full object-cover border-2 border-gray-100"
+            />
             <div className="flex-1 flex justify-between items-center">
               <div>
-                <h4 className="font-bold text-gray-900 text-sm">Michael John</h4>
+                <h4 className="font-bold text-gray-900 text-sm">
+                  Michael John
+                </h4>
                 <div className="flex items-center space-x-1 mt-1">
                   <Languages className="h-3 w-3 text-gray-400" />
                   <span className="text-xs text-gray-600">🇬🇧 English</span>
@@ -136,11 +155,15 @@ const PayNow = () => {
           <hr className="border-gray-200 my-6" />
 
           <div className="mb-8">
-            <h4 className="text-base font-bold text-gray-900 mb-4">Job Details</h4>
+            <h4 className="text-base font-bold text-gray-900 mb-4">
+              Job Details
+            </h4>
             <div className="space-y-3">
               <div className="flex justify-between items-center">
                 <p className="font-medium text-sm text-gray-900">Date</p>
-                <p className="font-medium text-gray-900 text-sm text-right">Wednesday - April 23, 2025</p>
+                <p className="font-medium text-gray-900 text-sm text-right">
+                  Wednesday - April 23, 2025
+                </p>
               </div>
               <div className="flex justify-between items-center">
                 <p className="font-medium text-sm text-gray-900">Time</p>
@@ -154,18 +177,24 @@ const PayNow = () => {
           </div>
 
           <div className="mb-8">
-            <h4 className="text-base font-bold text-gray-900 mb-4">Price Details</h4>
+            <h4 className="text-base font-bold text-gray-900 mb-4">
+              Price Details
+            </h4>
             <div className="space-y-3">
               <div className="flex justify-between items-center">
                 <p className="font-medium text-sm text-gray-900">Hourly Rate</p>
-                <p className="font-medium text-gray-900 text-sm text-right">$55 / hr</p>
+                <p className="font-medium text-gray-900 text-sm text-right">
+                  $55 / hr
+                </p>
               </div>
               <div className="flex justify-between items-center">
                 <p className="font-medium text-sm text-gray-900">Tax</p>
                 <p className="font-medium text-gray-900 text-sm">$5.00</p>
               </div>
               <div className="flex justify-between items-center">
-                <p className="font-medium text-sm text-gray-900">Estimate Total</p>
+                <p className="font-medium text-sm text-gray-900">
+                  Estimate Total
+                </p>
                 <p className="font-medium text-gray-900 text-sm">$60.00</p>
               </div>
             </div>
